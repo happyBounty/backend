@@ -52,14 +52,14 @@ if(!db) {
 /*
 * Below lines used to define route for the api services
 */
-app.get('/', (req, res) => res.send('Welcome to Cryptotrades API'))
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-app.use('/user', user)
-app.use('/settings', settings)
-app.use('/media', media)
-app.use('/category', category);
-app.use('/collection', collection)
-app.use('/item', item)
+app.get('/api/', (req, res) => res.send('Welcome to Cryptotrades API'))
+app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/user', user)
+app.use('/api/settings', settings)
+app.use('/api/media', media)
+app.use('/api/category', category);
+app.use('/api/collection', collection)
+app.use('/api/item', item) 
 
 /*
 * Below lines used to handle invalid api calls
